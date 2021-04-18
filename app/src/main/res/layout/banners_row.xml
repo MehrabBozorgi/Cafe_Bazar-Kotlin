@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingRight="5dp">
+
+    <RelativeLayout
+        android:id="@+id/rel_bannersRow_parent"
+        android:layout_width="240dp"
+        android:layout_height="230dp"
+        android:layout_alignParentRight="true">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/img_bannerRow_image"
+            android:layout_width="240dp"
+            android:layout_height="130dp"
+            android:layout_marginRight="10dp"
+            android:scaleType="centerCrop"
+            app:riv_corner_radius="10dp"
+            tools:src="@drawable/ic_launcher_background" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/img_bannerRow_icon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/img_bannerRow_image"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:scaleType="centerCrop"
+            app:riv_corner_radius="10dp"
+            tools:src="@drawable/ic_launcher_background" />
+
+        <TextView
+            android:id="@+id/txt_bannerRow_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_bannerRow_image"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/img_bannerRow_icon"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:text="esme" />
+
+        <TextView
+            android:id="@+id/txt_bannerRow_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_bannerRow_name"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/img_bannerRow_icon"
+            android:textColor="@color/grey700"
+            android:textSize="12sp"
+            tools:text="esme" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/tab_profile"
+        android:icon="@drawable/ic_profile"
+        android:title="بازار من" />
+<!--    <item-->
+<!--        android:id="@+id/tab_search"-->
+<!--        android:icon="@drawable/ic_search"-->
+<!--        android:title="جستجو" />-->
+    <item
+        android:id="@+id/tab_film"
+        android:icon="@drawable/ic_video"
+        android:title="ویدیو" />
+    <item
+        android:id="@+id/tab_app"
+        android:icon="@drawable/ic_cat"
+        android:title="برنامه" />
+    <item
+        android:id="@+id/tab_game"
+        android:icon="@drawable/ic_game"
+        android:title="بازی" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</menu>

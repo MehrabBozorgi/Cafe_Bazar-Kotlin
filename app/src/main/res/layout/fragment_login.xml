@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="150dp"
+    android:background="@color/white"
+    tools:context=".Profile.Other.LoginFragment">
+
+    <RelativeLayout
+        android:id="@+id/rel_fragment_login_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="15dp">
+
+        <EditText
+            android:textColor="@color/black"
+            android:id="@+id/edt_login_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:textSize="16sp"
+            android:background="@drawable/edt_style"
+            android:gravity="right"
+            android:hint="  ایمیل "
+            android:padding="8dp"
+            android:textColorHint="@color/grey700" />
+
+        <EditText
+            android:textColor="@color/black"
+            android:id="@+id/edt_login_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edt_login_email"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/edt_style"
+            android:textSize="16sp"
+            android:gravity="right"
+            android:hint="    رمز عبور "
+            android:inputType="textPassword"
+            android:padding="8dp"
+            android:textColorHint="@color/grey700" />
+
+        <Button
+            android:id="@+id/btn_login_enter"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@id/edt_login_pass"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/btn_style"
+            android:fontFamily="@font/iran_sans_bold"
+            android:text="ادامه"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

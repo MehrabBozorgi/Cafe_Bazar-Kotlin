@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d32f2f"
+    tools:context=".Profile.AboutUsFragment">
+
+    <TextView
+        android:id="@+id/txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/iran_sans_bold"
+        android:text="ارتباط با ما"
+        android:padding="15dp"
+        android:background="@drawable/edt_search_style"
+        android:textColor="@color/black"
+        android:textSize="35dp" />
+
+    <RelativeLayout
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:background="@drawable/edt_search_style"
+        android:id="@+id/relConnect1"
+        android:layout_marginTop="50dp"
+        android:layout_below="@id/txt"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/youtube"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/youtube" />
+        <TextView
+            android:id="@+id/txt2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/youtube"
+            android:fontFamily="@font/iran_sans_bold"
+            android:text="Mehrab Code"
+            android:textColor="@color/black"
+            android:textSize="25dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:background="@drawable/edt_search_style"
+        android:id="@+id/relConnect2"
+        android:layout_marginTop="25dp"
+        android:layout_below="@id/relConnect1"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/youtube1"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/likndin" />
+        <TextView
+            android:id="@+id/txt3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/youtube1"
+            android:fontFamily="@font/iran_sans_bold"
+            android:text="Mehrab Bozorgi"
+            android:textColor="@color/black"
+            android:textSize="25dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:background="@drawable/edt_search_style"
+        android:id="@+id/relConnect3"
+        android:layout_marginTop="25dp"
+        android:layout_below="@id/relConnect2"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/youtube3"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/instagram" />
+        <TextView
+            android:id="@+id/txt4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/youtube3"
+            android:fontFamily="@font/iran_sans_bold"
+            android:text="mehrab.code"
+            android:textColor="@color/black"
+            android:textSize="25dp" />
+    </RelativeLayout>
+
+
+
+    <ImageView
+        android:layout_width="270dp"
+        android:layout_height="270dp"
+        android:layout_below="@id/relConnect3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/logo" />
+
+</RelativeLayout>

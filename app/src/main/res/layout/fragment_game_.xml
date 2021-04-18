@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragmentGame_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:scrollbars="none"
+    tools:context=".Game.Game_Fragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rel_fragmentGame_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:elevation="20dp">
+
+            <TextView
+                android:id="@+id/edt_fragmentGame_edtSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textColor="@color/black"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/search_style"
+                android:drawableRight="@drawable/ic_baseline_search_edt"
+                android:gravity="right"
+                android:hint="  جستجو در بازی ها و برنامه ها"
+                android:padding="10dp"
+                android:textColorHint="@color/grey600"
+                android:textSize="16sp" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/imgGame_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_baseline_mic_24" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rel_fragmentGame_game"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/rel_fragmentGame_search"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:id="@+id/rel_getGoli_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/img_fragmentGame_bigPic"
+                    android:layout_width="360dp"
+                    android:layout_height="180dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/white"
+                    android:scaleType="centerCrop"
+                    app:riv_corner_radius="10dp"
+                    tools:src="@drawable/ic_launcher_background" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_getGoli_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rel_getGoli_1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/img_fragmentGame_iconGoli"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="centerCrop"
+                    app:riv_corner_radius="5dp"
+                    tools:src="@mipmap/ic_launcher_round" />
+
+                <TextView
+                    android:id="@+id/txt_fragmentGame_goli"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@id/img_fragmentGame_iconGoli"
+                    android:fontFamily="@font/iran_sans_bold"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    tools:text="esme haji" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_fragmentGame_goli"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@id/img_fragmentGame_iconGoli"
+                    android:text="15 مگ"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txt_fragmentGame_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rel_getGoli_2"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/iran_sans_bold"
+                android:text="بازی های برتر"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_fragmentGame_moreGame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_fragmentGame_1"
+                android:layout_marginTop="15dp" />
+
+            <RelativeLayout
+                android:id="@+id/rel_fragmentGame_5"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_below="@id/rv_fragmentGame_moreGame"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/txt_fragmentGame_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/iran_sans_bold"
+                    android:text="برترین بازی ها جدید"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txt_fragmentGame_newGameMore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="بیشتر    >"
+                    android:textColor="@color/grey600"
+                    android:textSize="14sp" />
+
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_fragmentGame_newGame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rel_fragmentGame_5"
+                android:layout_marginTop="15dp" />
+
+            <RelativeLayout
+                android:id="@+id/rel_fragmentGame_6"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_below="@id/rv_fragmentGame_newGame"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/txt_fragmentGame_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/iran_sans_bold"
+                    android:text="پرفروش های هفته"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+
+                    android:id="@+id/txt_fragmentGame_newGameMore2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="بیشتر    >"
+                    android:textColor="@color/grey600"
+                    android:textSize="14sp" />
+
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_fragmentGame_bestNew"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rel_fragmentGame_6"
+                android:layout_marginTop="15dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_fragmentGame_banners"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rv_fragmentGame_bestNew"
+                android:layout_marginTop="30dp" />
+
+            <RelativeLayout
+                android:id="@+id/rel_fragmentGame_7"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_below="@id/rv_fragmentGame_banners"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/txt_fragmentGame_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/iran_sans_bold"
+                    android:text="بازی های ایرانی"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txt_fragmentGame_newGameMore3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="بیشتر    >"
+                    android:textColor="@color/grey600"
+                    android:textSize="14sp" />
+
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_fragmentGame_update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rel_fragmentGame_7"
+                android:layout_marginTop="15dp" />
+
+            <RelativeLayout
+                android:id="@+id/rel_fragmentGame_catGame"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_below="@id/rv_fragmentGame_update"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/iran_sans_bold"
+                    android:text="دسته بندی های بازی"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="بیشتر    >"
+                    android:textColor="@color/grey800"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_fragmentGame_catGame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rel_fragmentGame_catGame"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

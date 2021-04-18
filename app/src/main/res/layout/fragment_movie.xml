@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:scrollbars="none"
+    tools:context=".Movie.Movie_Fragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/toolbar_movie"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/iran_sans_bold"
+                android:text="ویدیو"
+                android:textColor="@color/black"
+                android:textSize="28sp" />
+
+            <ImageView
+                android:id="@+id/savewhaite"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/txt_fragmentMovie_archive"
+                android:background="@drawable/circle_red"
+                android:src="@drawable/ic_baseline_mark_white" />
+
+            <TextView
+                android:id="@+id/txt_fragmentMovie_archive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:textSize="14sp"
+                android:fontFamily="@font/iran_sans_bold"
+                android:text="فهرست تماشا"
+                android:textColor="@color/red700" />
+
+        </RelativeLayout>
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/img_fragmentMovie_bigImage"
+            android:layout_width="320dp"
+            android:layout_height="180dp"
+            android:layout_below="@id/toolbar_movie"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:scaleType="centerCrop"
+            app:riv_corner_radius="15dp"
+            tools:src="@drawable/ic_launcher_background" />
+
+
+        <RelativeLayout
+            android:id="@+id/rel_fragmentMovie_1"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_below="@id/img_fragmentMovie_bigImage"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:id="@+id/txt_fragmentMovie_title1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/iran_sans_bold"
+                android:text="فیلم های خارجی روز"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txt_fragmentMovie_more1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="@font/iran_sans_bold"
+                android:text="بیشتر  >"
+                android:textColor="@color/grey600"
+                android:textSize="14sp" />
+
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_fragmentMovie_updateFilm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rel_fragmentMovie_1"
+            android:layout_marginTop="15dp" />
+
+        <TextView
+            android:id="@+id/txt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rv_fragmentMovie_updateFilm"
+            android:layout_alignParentRight="true"
+            android:fontFamily="@font/iran_sans_bold"
+            android:text="سریال ایرانی"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_fragmentMovie_serialIran"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt1"
+            android:layout_marginTop="15dp" />
+
+        <RelativeLayout
+            android:id="@+id/rel_fragmentMovie_2"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_below="@id/rv_fragmentMovie_serialIran"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/txt_fragmentMovie_title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/iran_sans_bold"
+                android:text="سریال قهرمانی"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txt_fragmentMovie_more2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/iran_sans_bold"
+                android:text="بیشتر  >"
+                android:textColor="@color/grey600"
+                android:textSize="14sp" />
+
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_fragmentMovie_serialSuper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rel_fragmentMovie_2"
+            android:layout_marginTop="15dp" />
+
+
+        <RelativeLayout
+            android:id="@+id/rel_fragmentMovie_4"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_below="@id/rv_fragmentMovie_serialSuper"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/txt_fragmentMovie_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/iran_sans_bold"
+                android:text="انیمیشن"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txt_fragmentMovie_newGameMore4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/iran_sans_bold"
+                android:text="بیشتر  >"
+                android:textColor="@color/grey600"
+                android:textSize="14sp" />
+
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_fragmentMovie_animate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rel_fragmentMovie_4"
+            android:layout_marginTop="15dp" />
+
+        <RelativeLayout
+            android:id="@+id/rel_fragmentMovie_catMovie"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_below="@id/rv_fragmentMovie_animate"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/iran_sans_bold"
+                android:text="ژانرهای ویدیو"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_fragmentMovie_catMovie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rel_fragmentMovie_catMovie"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp" />
+
+
+    </RelativeLayout>
+</ScrollView>

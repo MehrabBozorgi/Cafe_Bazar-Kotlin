@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp">
+
+    <RelativeLayout
+        android:id="@+id/rel_moreGameRow_parent"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/img_moreGameRow_icon"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerCrop"
+            app:riv_corner_radius="5dp"
+            tools:src="@mipmap/ic_launcher_round" />
+
+        <TextView
+            android:id="@+id/txt_moreGameRow_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_moreGameRow_icon"
+            android:layout_alignRight="@id/img_moreGameRow_icon"
+            android:layout_marginTop="10dp"
+            android:maxEms="5"
+            android:minLines="1"
+            android:textColor="@color/grey900"
+            android:textSize="12sp"
+            tools:text="name" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

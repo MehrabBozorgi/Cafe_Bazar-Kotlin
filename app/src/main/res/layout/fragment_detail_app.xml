@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/framDetail_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:scrollbars="none"
+    tools:context=".App.Other.DetailAppFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rel_fragmentDetailApp_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp">
+
+            <ImageView
+                android:id="@+id/img_fragmentDetailApp_share"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/circle"
+                android:src="@drawable/ic_baseline_share_24" />
+
+            <ImageView
+                android:id="@+id/save_emptyApp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/img_fragmentDetailApp_share"
+                android:background="@drawable/circle"
+                android:src="@drawable/ic_baseline_mark_white" />
+
+            <ImageView
+                android:id="@+id/img_fragmentDetailApp_back"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/circle"
+                android:src="@drawable/ic_baseline_arrow_back" />
+        </RelativeLayout>
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/img_fragmentDetailApp_icon"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_below="@id/rel_fragmentDetailApp_toolbar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerCrop"
+            app:riv_corner_radius="15dp"
+            tools:src="@drawable/ic_launcher_background" />
+
+        <TextView
+            android:id="@+id/txt_fragmentDetailApp_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_fragmentDetailApp_icon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/iran_sans_bold"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            tools:text="نبرد پادشاهان" />
+
+        <TextView
+            android:id="@+id/txt_fragmentDetailApp_developerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_fragmentDetailApp_name"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="5dp"
+            android:textStyle="bold"
+            android:textColor="@color/grey800"
+            android:textSize="16sp"
+            tools:text="اسم سازنده" />
+
+        <Button
+            android:id="@+id/btn_fragmentDetailApp_install"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/txt_fragmentDetailApp_developerName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/btn_style"
+            android:fontFamily="@font/iran_sans_bold"
+            android:text="نصب"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:visibility="visible" />
+
+
+        <ProgressBar
+            android:id="@+id/progress_fragmentDetailApp_progressBar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_fragmentDetailApp_developerName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/txt_fragmentDetailApp_kind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_fragmentDetailApp_developerName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="70dp"
+            android:textStyle="bold"
+            android:textColor="@color/grey700"
+            android:textSize="14sp"
+            tools:text="خرید درون برنامه ای" />
+
+        <View
+            android:id="@+id/view1App"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/txt_fragmentDetailApp_kind"
+            android:layout_marginTop="15dp"
+            android:background="@color/grey600" />
+
+        <LinearLayout
+            android:id="@+id/linearApp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view1App"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_fragmentDetailApp_size"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                tools:text="130 مگابایت" />
+
+            <View
+                android:layout_width="0.1dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="0.1"
+                android:background="@color/grey600" />
+
+            <TextView
+                android:id="@+id/txt_fragmentDetailApp_cat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                tools:text="دسته بندی" />
+
+            <View
+                android:layout_width="0.1dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="0.1"
+                android:background="@color/grey600" />
+
+            <TextView
+                android:id="@+id/txt_fragmentDetailApp_comment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                tools:text="تعداد نظرات" />
+
+            <View
+                android:layout_width="0.1dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="0.1"
+                android:background="@color/grey600" />
+
+            <TextView
+                android:id="@+id/txt_fragmentDetailApp_download"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                tools:text="تعداد دانلود" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear2App"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearApp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="حجم"
+                android:textColor="@color/grey800"
+                android:textSize="12dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="دسته ها"
+                android:textColor="@color/grey800"
+                android:textSize="12dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="نظرات"
+                android:textColor="@color/grey800"
+                android:textSize="12dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="نصب فعال"
+                android:textColor="@color/grey800"
+                android:textSize="12dp" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view8App"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/linear2App"
+            android:background="@color/grey600" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_fragmentDetailApp_slide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view8App"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:id="@+id/txt_fragmentDetailApp_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rv_fragmentDetailApp_slide"
+            android:layout_marginTop="50dp"
+            android:maxLines="2"
+            android:minLines="2"
+            android:textColor="@color/grey800"
+            android:textSize="16sp"
+            tools:text="توضیاحت" />
+
+        <RelativeLayout
+            android:id="@+id/card_fragmentDetailApp_more"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="25dp"
+            android:padding="10dp"
+            android:background="@drawable/card_style"
+            android:layout_below="@id/txt_fragmentDetailApp_desc">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="بیشتر"
+                android:textColor="@color/green700"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:textSize="16sp"
+                android:fontFamily="@font/iran_sans_bold" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view2App"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/card_fragmentDetailApp_more"
+            android:layout_marginTop="15dp"
+            android:background="@color/grey600" />
+
+        <TextView
+            android:id="@+id/txt1App"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view2App"
+            android:layout_alignParentRight="true"
+            android:fontFamily="@font/iran_sans_bold"
+            android:text="نظرات و امتیاز ها"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+
+        <RatingBar
+            android:id="@+id/ratingBarApp"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:visibility="gone"
+            android:layout_below="@id/txt1App"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp" />
+
+        <LinearLayout
+            android:id="@+id/linear_ratingApp"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt1App"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp">
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_star" />
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_star" />
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_star" />
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_star" />
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_star" />
+
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view3App"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/txt1App"
+            android:layout_marginTop="120dp"
+            android:background="@color/grey600" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_fragmentDetailApp_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view3App"
+            android:layout_marginTop="15dp" />
+
+        <TextView
+            android:id="@+id/txt2App"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rv_fragmentDetailApp_comment"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/iran_sans_bold"
+            android:text="اطلاعات توسعه دهنده"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <RelativeLayout
+            android:id="@+id/rel_fragmentDetailApp_developerInformation1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt2App"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:id="@+id/txt_fragmentDetailApp_developerEmail1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="15dp"
+                android:text="پست الکترونیک"
+                android:textColor="@color/grey700"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txt_fragmentDetailApp_developerEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/grey800"
+                android:textSize="14sp"
+                tools:text="پست الکترونیک" />
+
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view4App"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/rel_fragmentDetailApp_developerInformation1"
+            android:layout_marginTop="15dp"
+            android:background="@color/grey600" />
+
+        <RelativeLayout
+            android:id="@id/rel_fragmentDetailApp_developerInformation2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rel_fragmentDetailApp_developerInformation1"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:id="@+id/txt_fragmentDetailApp_developerEmail3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="15dp"
+                android:text="تلفن"
+                android:textColor="@color/grey700"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txt_fragmentDetailApp_developerphone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/grey800"
+                android:textSize="14sp"
+                tools:text="09111111152" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view5App"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/rel_fragmentDetailApp_developerInformation2"
+            android:layout_marginTop="15dp"
+            android:background="@color/grey600" />
+
+        <RelativeLayout
+            android:id="@+id/rel_fragmentDetailApp_developerInformation3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rel_fragmentDetailApp_developerInformation2"
+            android:layout_marginTop="15dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/txt_fragmentDetailApp_developerEmail2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="15dp"
+                android:text="تارنما"
+                android:textColor="@color/grey700"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txt_fragmentDetailApp_developerWeb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/grey800"
+                android:maxEms="12"
+                android:textSize="14sp"
+                tools:text="website" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view6App"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/rel_fragmentDetailApp_developerInformation3"
+            android:layout_marginTop="15dp"
+            android:background="@color/grey600" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_fragmentDetailApp_extra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view6App"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="60dp" />
+
+    </RelativeLayout>
+
+</ScrollView>

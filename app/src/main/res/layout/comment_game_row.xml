@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingRight="10dp"
+    android:paddingLeft="10dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/commentBox"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/comment_box_style">
+
+        <ImageView
+            android:id="@+id/person"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_person" />
+
+        <TextView
+            android:id="@+id/txt_commentRow_name"
+            tools:text="اسم حاجی"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/person"
+            android:textColor="@color/grey600"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/txt_commentRow_date"
+            tools:text="13/88/88"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_commentRow_name"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/person"
+            android:textColor="@color/grey600"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/txt_fragmentRow_comment"
+            tools:text="غالیع"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/person"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/grey800"
+            android:textSize="12dp" />
+
+
+    </RelativeLayout>
+</RelativeLayout>

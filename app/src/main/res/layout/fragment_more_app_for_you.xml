@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingRight="10dp"
+    android:paddingLeft="10dp"
+    android:scrollbars="none"
+    android:background="@color/white"
+    tools:context=".App.Other.MoreAppForYouFragment">
+
+    <RelativeLayout
+        android:id="@+id/fragmentMoreApp_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentTop="true"
+        android:elevation="20dp">
+
+        <ImageView
+            android:id="@+id/img_fragmentMoreApp_back"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/txt_fragmentMoreApp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/img_fragmentMoreApp_back"
+            android:fontFamily="@font/iran_sans_bold"
+            android:text="برنامه های بیشتر برای شما"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_fragmentMoreAppForYou_moreYouAppRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fragmentMoreApp_toolbar"
+        tools:src="@drawable/ic_launcher_background" />
+
+</RelativeLayout>

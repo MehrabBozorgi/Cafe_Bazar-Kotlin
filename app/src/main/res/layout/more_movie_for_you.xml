@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:paddingRight="10dp"
+    android:paddingLeft="10dp"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rel_moreMovieForYouRow_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        >
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/img_moreMovieForYouRow_icon"
+            android:layout_width="70dp"
+            android:layout_height="100dp"
+            android:layout_alignParentRight="true"
+            android:scaleType="centerCrop"
+            app:riv_corner_radius="10dp"
+            tools:src="@drawable/ic_launcher_background" />
+
+        <RelativeLayout
+            android:layout_width="175dp"
+            android:layout_height="170dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/img_moreMovieForYouRow_icon">
+
+            <TextView
+                android:id="@+id/txt_moreMovieForYouRow_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/iran_sans_bold"
+                android:text="اسم حاجی"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txt_moreMovieForYouRow_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_moreMovieForYouRow_name"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                android:text="2020"
+                android:textColor="@color/grey600"
+                android:textSize="12sp" />
+
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_moreMovieForYouRow_play"
+            android:layout_width="90dp"
+            android:layout_height="45dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/btn_style2"
+            android:fontFamily="@font/iran_sans_bold"
+            android:text="پخش"
+            android:textColor="@color/red700"
+            android:textSize="14sp" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

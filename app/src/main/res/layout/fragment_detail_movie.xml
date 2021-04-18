@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:background="@color/white"
+    android:paddingRight="15dp"
+    android:scrollbars="none"
+    tools:context=".Movie.Other.DetailMovieFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="ExtraText">
+
+        <RelativeLayout
+            android:id="@+id/rel_fragmentDetailMovie_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp">
+
+            <ImageView
+                android:id="@+id/img_fragmentDetailMovie_share"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/circle"
+                android:src="@drawable/ic_baseline_share_24" />
+
+            <ImageView
+                android:id="@+id/save_emptyMovie"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/img_fragmentDetailMovie_share"
+                android:background="@drawable/circle"
+                android:src="@drawable/ic_baseline_mark_white" />
+
+            <ImageView
+                android:id="@+id/img_fragmentDetailMovie_back"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/circle"
+                android:src="@drawable/ic_baseline_arrow_back" />
+        </RelativeLayout>
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/img_fragmentDetailMovie_icon"
+            android:layout_width="100dp"
+            android:layout_height="130dp"
+            android:layout_below="@id/rel_fragmentDetailMovie_toolbar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerCrop"
+            app:riv_corner_radius="10dp"
+            tools:src="@drawable/ic_launcher_background" />
+
+        <TextView
+            android:id="@+id/txt_fragmentDetailMovie_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_fragmentDetailMovie_icon"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/iran_sans_bold"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            tools:text="esme haji" />
+
+        <TextView
+            android:id="@+id/txt_fragmentDetailMovie_kodom_site"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_fragmentDetailMovie_name"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/grey700"
+            android:textSize="14sp"
+            tools:text="esme haji" />
+
+        <TextView
+            android:id="@+id/txt_fragmentDetailMovie_cat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_fragmentDetailMovie_kodom_site"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/grey700"
+            android:textSize="14sp"
+            tools:text="esme haji" />
+
+        <Button
+            android:id="@+id/btn_fragmentDetailMovie_play"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/txt_fragmentDetailMovie_cat"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/btn_style_red"
+            android:fontFamily="@font/iran_sans_bold"
+            android:text="پخش"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/imdb"
+            android:layout_width="45dp"
+            android:layout_height="35dp"
+            android:layout_below="@id/btn_fragmentDetailMovie_play"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="60dp"
+            android:src="@drawable/imdb" />
+
+        <LinearLayout
+            android:id="@+id/linearMovie"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imdb"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_fragmentDetail_age"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:fontFamily="@font/iran_sans_bold"
+                android:gravity="center|bottom"
+                android:textColor="@color/grey800"
+                android:textSize="14sp"
+                tools:text="دسته بندی" />
+
+            <View
+                android:layout_width="0.1dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_weight="0.1"
+                android:background="@color/grey700" />
+
+            <TextView
+                android:id="@+id/txt_fragmentDetail_sub"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:fontFamily="@font/iran_sans_bold"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                tools:text="تعداد نظرات" />
+
+            <View
+                android:layout_width="0.1dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_weight="0.1"
+                android:background="@color/grey700" />
+
+            <TextView
+                android:id="@+id/txt_fragmentDetail_point"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:fontFamily="@font/iran_sans_bold"
+                android:gravity="center|bottom"
+                android:textColor="@color/grey800"
+                android:textSize="14sp"
+                tools:text=" 8.1/10 " />
+        </LinearLayout>
+
+
+        <com.skyhope.showmoretextview.ShowMoreTextView
+            android:id="@+id/txt_ViewMore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearMovie"
+            android:layout_marginTop="35dp"
+            android:padding="5dp"
+            android:textColor="@color/grey800"
+            android:textSize="14sp"
+            tools:text="یه چیزی" />
+
+        <TextView
+            android:id="@+id/txtMovie6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_ViewMore"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/iran_sans_bold"
+            android:text="تعداد فصل"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_fragmentDetail_fasl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtMovie6"
+            android:layout_marginTop="20dp" />
+
+
+        <View
+            android:id="@+id/viewMovie1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/rv_fragmentDetail_fasl"
+            android:layout_marginTop="20dp"
+            android:background="@color/grey700" />
+
+        <RelativeLayout
+            android:id="@+id/rel_likeOrDissLike"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/viewMovie1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:id="@+id/txtMovie1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/iran_sans_bold"
+                android:text="نظر شما"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/disslike"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_below="@id/txtMovie1"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="110dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/disslike" />
+
+            <ImageView
+                android:id="@+id/like"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_below="@id/txtMovie1"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="110dp"
+                android:src="@drawable/like" />
+
+            <TextView
+                android:id="@+id/txt_fragmentDetailMovie_write"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/like"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/iran_sans_bold"
+                android:text="نوشتن نظر"
+                android:textColor="@color/red700"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/viewMovie2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/rel_likeOrDissLike"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="@color/grey700" />
+
+        <TextView
+            android:id="@+id/txtMovie2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/viewMovie2"
+            android:layout_alignParentRight="true"
+            android:fontFamily="@font/iran_sans_bold"
+            android:text="نظر کاربران"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_fragmentDetailMovie_movieComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtMovie2"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:id="@+id/txtMovie3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rv_fragmentDetailMovie_movieComment"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/iran_sans_bold"
+            android:text="همه نظرات"
+            android:textColor="@color/red700"
+            android:textSize="18sp" />
+
+        <View
+            android:id="@+id/viewMovie3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/txtMovie3"
+            android:layout_marginTop="15dp"
+            android:background="@color/grey700" />
+
+        <TextView
+            android:id="@+id/txt_fragmentMovie_tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/viewMovie3"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:textColor="@color/grey800"
+            android:textSize="14sp" />
+
+        <View
+            android:id="@+id/viewMovie4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/txt_fragmentMovie_tools"
+            android:layout_marginTop="15dp"
+            android:background="@color/grey700" />
+
+        <TextView
+            android:id="@+id/txtMovie4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/viewMovie4"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/iran_sans_bold"
+            android:text="فیلم های مشابه"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_fragmentDetailMovie_movieLike"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtMovie4"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:id="@+id/txtMovie5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rv_fragmentDetailMovie_movieLike"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/iran_sans_bold"
+            android:text="سایر اطلاعات"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+
+        //1
+
+        <RelativeLayout
+            android:id="@+id/rel_InfoMovie1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtMovie5"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/iran_sans_bold"
+                android:text="نوع"
+                android:textColor="@color/grey600"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txt_fragmentDetailMovie_kind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:text="نوع1" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/viewMovie5"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/rel_InfoMovie1"
+            android:background="@color/grey700" />
+
+        //2
+
+        <RelativeLayout
+            android:id="@+id/rel_InfoMovie2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rel_InfoMovie1"
+            android:layout_marginTop="10dp"
+
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="سال ساخت"
+                android:textColor="@color/grey700"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txt_fragmentDetailMovie_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:text="نوع2" />
+
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/viewMovie6"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/rel_InfoMovie2"
+            android:background="@color/grey700" />
+
+        //3
+
+        <RelativeLayout
+            android:id="@+id/rel_InfoMovie3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rel_InfoMovie2"
+
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="مدت زمان"
+                android:textColor="@color/grey700"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txt_fragmentDetailMovie_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:text="نوع3" />
+
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/viewMovie7"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/rel_InfoMovie3"
+            android:background="@color/grey700" />
+
+        //4
+
+        <RelativeLayout
+            android:id="@+id/rel_InfoMovie4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rel_InfoMovie3"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="کشور سازنده"
+                android:textColor="@color/grey700"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txt_fragmentDetailMovie_country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:text="نوع4" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/viewMovie8"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/rel_InfoMovie4"
+            android:background="@color/grey700" />
+
+        //5
+
+        <RelativeLayout
+            android:id="@+id/rel_InfoMovie5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rel_InfoMovie4"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="کیفیت"
+                android:textColor="@color/grey700"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txt_fragmentDetailMovie_keyfiat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:text="نوع5" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/viewMovie9"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/rel_InfoMovie5"
+            android:background="@color/grey700" />
+
+        //6
+
+        <RelativeLayout
+            android:id="@+id/rel_InfoMovie6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rel_InfoMovie5"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="زیر نویس ها"
+                android:textColor="@color/grey700"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txt_fragmentDetailMovie_sub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:text="نوع6" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</ScrollView>

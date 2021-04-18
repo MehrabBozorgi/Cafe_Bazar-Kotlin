@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="110dp"
+    android:paddingRight="5dp"
+    android:paddingLeft="5dp"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rel_signedAdapterRow_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        >
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/img_signedAdapterRow_icon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentRight="true"
+            app:riv_corner_radius="10dp"
+            tools:src="@drawable/ic_launcher_background" />
+
+        <RelativeLayout
+            android:layout_width="160dp"
+            android:layout_height="90dp"
+            android:layout_marginLeft="5dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/img_signedAdapterRow_icon">
+
+            <TextView
+                android:id="@+id/txt_signedAdapterRow_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/iran_sans_bold"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:text="اسم حاجی"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txt_signedAdapterRow_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/txt_signedAdapterRow_name"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:text="2000"
+                android:textColor="@color/grey600"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

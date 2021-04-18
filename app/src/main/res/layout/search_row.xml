@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingRight="10dp"
+    android:paddingLeft="10dp"
+    android:scrollbars="none"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:padding="5dp"
+            android:background="@drawable/search_style"
+            android:id="@+id/searchParent"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            >
+
+            <ImageView
+                android:id="@+id/imgSearch_row"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_baseline_search_24" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/imgSearch_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                tools:src="@drawable/ic_baseline_mic_24" />
+
+            <TextView
+                android:id="@+id/txt_searchRow_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@id/imgSearch_row"
+                android:padding="5dp"
+                android:textColor="@color/grey700"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                tools:text="اسم حاجی" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

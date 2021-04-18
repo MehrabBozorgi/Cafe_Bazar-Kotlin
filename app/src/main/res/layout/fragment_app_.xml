@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragmentApp_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:scrollbars="none"
+    tools:context=".App.App_Fragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rel_fragmentApp_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:elevation="20dp">
+
+            <TextView
+                android:id="@+id/edt_fragmentApp_edtSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/search_style"
+                android:drawableRight="@drawable/ic_baseline_search_edt"
+                android:gravity="right"
+                android:hint="  جستجو در بازی ها و برنامه ها"
+                android:padding="10dp"
+                android:textColorHint="@color/grey600"
+                android:textSize="16sp" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/imgApp_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_baseline_mic_24" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_appFragment_rel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/rel_fragmentApp_search"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:id="@+id/txt_fragmentApp_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/iran_sans_bold"
+                android:text="برنامه های پیشنهادی"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_fragmentApp_moreApp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rel_appFragment_rel"
+            android:layout_marginTop="15dp" />
+
+        <RelativeLayout
+            android:id="@+id/rel_fragmentApp_5"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_below="@id/rv_fragmentApp_moreApp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/txt_fragmentApp_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/iran_sans_bold"
+                android:text="برترین برنامه ها جدید"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txt_fragmentApp_newAppMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/iran_sans_bold"
+                android:text="بیشتر    >"
+                android:textColor="@color/grey600"
+                android:textSize="14sp"
+                 />
+
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_fragmentApp_newApp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rel_fragmentApp_5"
+            android:layout_marginTop="15dp" />
+
+        <RelativeLayout
+            android:id="@+id/rel_fragmentApp_6"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_below="@id/rv_fragmentApp_newApp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/txt_fragmentApp_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/iran_sans_bold"
+                android:text="در حال پیشرفت"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txt_fragmentApp_newAppMore2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="بیشتر    >"
+                android:textColor="@color/grey600"
+                android:textSize="14sp"
+                 />
+
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_fragmentApp_bestNew"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rel_fragmentApp_6"
+            android:layout_marginTop="15dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_fragmentApp_banners"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rv_fragmentApp_bestNew"
+            android:layout_marginTop="35dp"
+            android:layout_marginBottom="30dp" />
+
+        <RelativeLayout
+            android:id="@+id/rel_fragmentApp_7"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_below="@id/rv_fragmentApp_banners"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/txt_fragmentApp_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/iran_sans_bold"
+                android:text="برترین برنامه ها"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txt_fragmentApp_newAppMore3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="بیشتر    >"
+                android:textColor="@color/grey600"
+                android:textSize="14sp"
+                 />
+
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_fragmentApp_update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rel_fragmentApp_7"
+            android:layout_marginTop="15dp" />
+
+        <RelativeLayout
+            android:id="@+id/rel_fragmentApp_catApp"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_below="@id/rv_fragmentApp_update"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/iran_sans_bold"
+                android:text="دسته بندی های برنامه"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="بیشتر    >"
+                android:textColor="@color/grey800"
+                android:textSize="14sp"
+                />
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_fragmentApp_catApp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rel_fragmentApp_catApp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp" />
+
+
+    </RelativeLayout>
+
+</ScrollView>
